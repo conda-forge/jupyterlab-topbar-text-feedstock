@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-topbar-text" %}
-{% set version = "0.6.2" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdcbe4522bf6f79bb66b33746eedab16f6d371b2c4fdc95417b8d0edc7d2e8fc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f2b552120f9611c8ebffdf284eecd30751b7a0517f7d74dde7e09e7046c3a1e0
 
 build:
   number: 0
@@ -17,13 +17,15 @@ build:
 
 requirements:
   host:
+    - hatch-jupyter-builder >=0.5
+    - hatch-nodejs-version
+    - hatchling >=1.5.0
+    - jupyterlab =4
     - pip
-    - python >=3.6
-    - jupyter-packaging >=0.10,<1
+    - python >=3.6,<4.0
   run:
-    - jupyterlab ~=3.0
-    - jupyterlab-topbar >=0.6,<0.7
-    - python >=3.6
+    - jupyterlab ~=4.0
+    - python >=3.6,<4.0
 
 test:
   commands:
@@ -34,7 +36,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/jupyterlab-contrib/jupyterlab-topbar-text
+  home: https://github.com/jupyterlab-contrib/jupyterlab-topbar/tree/main/packages/topbar-text-extension
   summary: JupyterLab extension to display arbitrary text in the top bar
   license: BSD-3-Clause
   license_file: LICENSE
