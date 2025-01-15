@@ -3,7 +3,7 @@ About jupyterlab-topbar-text-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-topbar-text-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyterlab-contrib/jupyterlab-topbar-text
+Home: https://github.com/jupyterlab-contrib/jupyterlab-topbar/tree/main/packages/topbar-text-extension
 
 Package license: BSD-3-Clause
 
