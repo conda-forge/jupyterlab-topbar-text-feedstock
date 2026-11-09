@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-topbar-text" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c243d4fa6e4766b24666688565d3059bc3d073e0a113442f369c360a6d7fdd54
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: dfb402adc52710583a39e693762d4e385aa2d5f4575d9b8f900a151de5847b03
 
 build:
   number: 0
